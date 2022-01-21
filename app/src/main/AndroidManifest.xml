@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CuanKu">
         <activity
-            android:name=".list_item"
+            android:name=".ListItem"
             android:exported="false" />
         <activity
             android:name=".FormData"
