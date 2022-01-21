@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">cuanKu</string>
+    <string name="list">List</string>
+    <string name="nominal">Nominal</string>
+    <string name="judul">Judul</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="update">Update</string>
+    <string name="simpan">Simpan</string>
+    <string name="reset">Reset</string>
 </resources>

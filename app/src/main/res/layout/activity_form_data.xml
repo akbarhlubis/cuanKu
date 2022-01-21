@@ -1,10 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FormData">
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <EditText
+      android:id="@+id/nominal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="30dp"
+      android:layout_marginEnd="24dp"
+      android:background="@drawable/stroke_shape"
+      android:hint="@string/nominal"
+      android:inputType="number"
+      android:padding="10dp"
+      android:textSize="18sp"/>
+
+  <EditText
+      android:id="@+id/judul"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="30dp"
+      android:layout_marginEnd="24dp"
+      android:background="@drawable/stroke_shape"
+      android:hint="@string/judul"
+      android:inputType="text"
+      android:padding="10dp"
+      android:textSize="18sp" />
+
+  <EditText
+      android:id="@+id/keterangan"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="30dp"
+      android:layout_marginEnd="24dp"
+      android:background="@drawable/stroke_shape"
+      android:hint="@string/keterangan"
+      android:inputType="textLongMessage"
+      android:padding="10dp"
+      android:textSize="18sp" />
+
+  <EditText
+      android:id="@+id/tanggal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="30dp"
+      android:layout_marginEnd="24dp"
+      android:background="@drawable/stroke_shape"
+      android:hint="@string/tanggal"
+      android:inputType="datetime"
+      android:padding="10dp"
+      android:textSize="18sp" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btnsimpan"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/orange"
+        android:radius="10dp"
+        android:text="@string/simpan" />
+
+    <Button
+        android:id="@+id/btnreset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/blue"
+        android:text="@string/reset"/>
+  </LinearLayout>
+
+
+</LinearLayout>
