@@ -96,7 +96,7 @@
             android:layout_weight="1"
             android:background="@drawable/stroke_corner_btn"
             android:text="@string/reset"
-            android:textColor="@color/yellow" />
+            android:textColor="@color/blue" />
     </LinearLayout>
 
 </LinearLayout>
