@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/about"
-        android:title="Tentang Kami"
+        android:title="@string/about"
         app:showAsAction="never"/>
     <item
         android:id="@+id/exit"
-        android:title="Keluar Aplikasi"
+        android:title="@string/keluar"
         app:showAsAction="never"/>
 </menu>
