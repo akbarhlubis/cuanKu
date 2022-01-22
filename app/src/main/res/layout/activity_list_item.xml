@@ -27,10 +27,10 @@
         android:layout_height="26dip"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dip"
         android:layout_toStartOf="@id/harga"
         android:ellipsize="marquee"
         android:singleLine="true"
-        android:layout_marginStart="12dip"
         android:text="Pengeluaran"
         android:textColor="@color/blue"
         android:textSize="12sp" />
