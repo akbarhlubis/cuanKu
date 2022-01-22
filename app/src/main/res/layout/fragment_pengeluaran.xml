@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PengeluaranFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/nominal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/stroke_shape"
+        android:drawableStart="@drawable/ic_discount"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/nominal_pengeluaran"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/stroke_shape"
+        android:drawableStart="@drawable/ic_document"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/judul"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/keterangan"
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/stroke_shape_long"
+        android:drawableStart="@drawable/ic_more_square"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/keterangan"
+        android:inputType="text|textMultiLine"
+        android:padding="10dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/tanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/stroke_shape"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/tanggal"
+        android:inputType="datetime"
+        android:padding="10dp"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnsimpan"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/rounded_corner_btn"
+            android:radius="10dp"
+            android:textColor="@color/white"
+            android:text="@string/simpan" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnreset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_corner_btn"
+            android:text="@string/reset"
+            android:textColor="@color/blue" />
+    </LinearLayout>
+
+
+</LinearLayout>
