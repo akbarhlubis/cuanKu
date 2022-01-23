@@ -89,7 +89,7 @@ See the [open issues](https://github.com/akbarhlubis/cuanKu/issues) for a full l
 ## Contact
 
 - Akbar Hamonanangan Lubis - [@instagram](https://instagram.com/akbarhlubis1) - [@linkedin](https://www.linkedin.com/in/akbar-hamonangan-lubis-81477a207/) - akbar_hamonangan_lubis@teknokrat.ac.id
-- Fikri Arif Riyadi - [@instagram](https://instagram.com/akbarhlubis1) - [@linkedin](https://www.linkedin.com/in/akbar-hamonangan-lubis-81477a207/) - akbar_hamonangan_lubis@teknokrat.ac.id
+- Fikri Arif Riyadi - [@instagram](https://www.instagram.com/fikriarifriadi/) - fikriktb12@gmail.com
 
 Project Link: [https://github.com/akbarhlubis/cuanKu](https://github.com/akbarhlubis/cuanKu)
 
