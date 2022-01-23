@@ -34,7 +34,7 @@
     <br />
     <a href="https://github.com/akbarhlubis/cuanKu">View Demo</a>
     ·
-    <a href="https://github.com/akbarlubis/cuanKu/issues">Report Bug</a>
+    <a href="https://github.com/akbarhlubis/cuanKu/issues">Report Bug</a>
     ·
     <a href="https://github.com/akbarhlubis/cuanKu/issues">Request Feature</a>
   </p>
