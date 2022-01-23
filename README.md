@@ -27,7 +27,7 @@
 <h3 align="center">CuanKu: Pengelola Keuangan Harian</h3>
 
   <p align="center">
-    Merupakan aplikasi android yang berbasis Java dalam pembuatannya, tujuan pembuatan aplikasi ini untuk memudahkan orang-orang yang kurang dapat memanajemen uangnya dengan baik dan dapat terpantau dengan aplikasi ini
+    Projek ini merupakan syarat Ujian Akhir Semester mata kuliah Pemrograman Mobile
     <br />
     <a href="https://github.com/akbarhlubis/cuanKu"><strong>Explore the docs »</strong></a>
     <br />
@@ -73,9 +73,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `akbarhlubis`, `cuanKu`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+Merupakan aplikasi android yang berbasis Java dalam pembuatannya, tujuan pembuatan aplikasi ini untuk memudahkan orang-orang yang kurang dapat memanajemen uangnya dengan baik dan dapat terpantau dengan aplikasi ini
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -102,7 +102,8 @@ See the [open issues](https://github.com/akbarhlubis/cuanKu/issues) for a full l
 
 ## Contact
 
-Akbar Hamonanangan Lubis - [@instagram](https://instagram.com/akbarhlubis1) - [@linkedin](https://www.linkedin.com/in/akbar-hamonangan-lubis-81477a207/) - akbar_hamonangan_lubis@teknokrat.ac.id
+- Akbar Hamonanangan Lubis - [@instagram](https://instagram.com/akbarhlubis1) - [@linkedin](https://www.linkedin.com/in/akbar-hamonangan-lubis-81477a207/) - akbar_hamonangan_lubis@teknokrat.ac.id
+- Fikri Arif Riyadi - [@instagram](https://instagram.com/akbarhlubis1) - [@linkedin](https://www.linkedin.com/in/akbar-hamonangan-lubis-81477a207/) - akbar_hamonangan_lubis@teknokrat.ac.id
 
 Project Link: [https://github.com/akbarhlubis/cuanKu](https://github.com/akbarhlubis/cuanKu)
 
