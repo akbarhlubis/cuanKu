@@ -99,25 +99,14 @@ See the [open issues](https://github.com/akbarhlubis/cuanKu/issues) for a full l
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 <!-- CONTACT -->
+
 ## Contact
 
-Akbar Hamonanangan Lubis - [@instagram](https://instagram.com/akbarhlubis1) - akbar_hamonangan_lubis@teknokrat.ac.id
+Akbar Hamonanangan Lubis - [@instagram](https://instagram.com/akbarhlubis1) - [@linkedin](https://www.linkedin.com/in/akbar-hamonangan-lubis-81477a207/) - akbar_hamonangan_lubis@teknokrat.ac.id
 
 Project Link: [https://github.com/akbarhlubis/cuanKu](https://github.com/akbarhlubis/cuanKu)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
