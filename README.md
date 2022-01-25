@@ -65,8 +65,6 @@ Merupakan aplikasi android yang berbasis Java dalam pembuatannya, tujuan pembuat
 
 ### Protoytpe
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F6nYymeJsPnwiirJ7bx5a3q%2FUAS-MOBILE%3Fpage-id%3D0%253A1%26node-id%3D35%253A187%26viewport%3D241%252C48%252C0.37%26scaling%3Dscale-down%26starting-point-node-id%3D11%253A200" allowfullscreen></iframe>
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
