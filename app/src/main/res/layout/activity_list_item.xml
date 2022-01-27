@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_item"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="8dp">
 
     <RelativeLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="fill_parent"
         android:layout_height="78dp"
+        android:background="@drawable/corner_item_fill"
         android:padding="10dip"
-        tools:context=".ListItem"
-        android:background="@drawable/corner_item_fill">
+        tools:context=".ListItem">
 
         <TextView
-            android:id="@+id/harga"
+            android:id="@+id/nominal"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_alignParentTop="true"
@@ -27,13 +28,13 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_subtitle"
+            android:id="@+id/kategori"
             android:layout_width="fill_parent"
             android:layout_height="26dip"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="12dip"
-            android:layout_toStartOf="@id/harga"
+            android:layout_toStartOf="@id/nominal"
             android:ellipsize="marquee"
             android:singleLine="true"
             android:text="Pengeluaran"
@@ -41,15 +42,15 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tv_title"
-            android:layout_marginStart="12dip"
+            android:id="@+id/judul"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignWithParentIfMissing="true"
-            android:layout_above="@id/tv_subtitle"
+            android:layout_above="@id/kategori"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_toLeftOf="@id/harga"
+            android:layout_marginStart="12dip"
+            android:layout_toLeftOf="@id/nominal"
             android:gravity="center_vertical"
             android:text="Laundry"
             android:textColor="@color/orange"

@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PengeluaranFragment">
+    tools:context=".TambahPengeluaranFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
-        android:id="@+id/nominal"
+        android:id="@+id/edt_nominal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -24,7 +24,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/judul"
+        android:id="@+id/edt_judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -40,7 +40,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/keterangan"
+        android:id="@+id/edt_keterangan"
         android:layout_width="match_parent"
         android:layout_height="131dp"
         android:layout_marginStart="24dp"
@@ -56,7 +56,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/tanggal"
+        android:id="@+id/edt_tanggal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -78,24 +78,24 @@
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnsimpan"
+            android:id="@+id/btn_simpan"
             android:layout_width="209dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:background="@drawable/rounded_corner_btn"
             android:radius="10dp"
             android:textColor="@color/white"
-            android:text="@string/simpan" />
+            android:text="@string/btn_simpan" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnreset"
+            android:id="@+id/btn_reset"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:layout_weight="1"
             android:background="@drawable/stroke_corner_btn"
-            android:text="@string/reset"
+            android:text="@string/btn_reset"
             android:textColor="@color/blue" />
     </LinearLayout>
 
