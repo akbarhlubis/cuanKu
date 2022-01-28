@@ -18,6 +18,20 @@
     <string name="btn_reset">Reset</string>
 
     <string name="keterangan_about"> Aplikasi ini merupakan hasil Ujian Akhir Semester mata kuliah Pemrograman Mobile di Universitas Teknokrat Indonesia</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+<!--    Slider-->
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">Berikutnya</string>
+    <string name="skip">Lewati</string>
+    <string name="start">Mulai</string>
+
+    <string name="slide_1_title">Terpantau</string>
+    <string name="slide_1_desc">Jadi lebih tau yang mana aja yang buat duit jadi boros</string>
+
+    <string name="slide_2_title">Terangkum</string>
+    <string name="slide_2_desc">Dapat mengulas dan mereview kembali</string>
+
+    <string name="slide_3_title">Tersimpel</string>
+    <string name="slide_3_desc">Mudah dipahami dan tidak sulit untuk digunakan</string>
 </resources>
