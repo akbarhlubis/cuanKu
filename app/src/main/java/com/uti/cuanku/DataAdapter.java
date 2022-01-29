@@ -45,10 +45,10 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ItemHolder> {
         holder.judul.setText(listItem.get(position).getJudul());
         holder.kategori.setText(listItem.get(position).getKategori());
         holder.cv_item.setOnClickListener(new CustomClick(position, (view, position1) -> {
-            Intent intent = new Intent(activity, TambahPemasukanFragment.class);
-            intent.putExtra(TambahPemasukanFragment.EXTRA_POSITION,position1);
-            intent.putExtra(TambahPemasukanFragment.EXTRA_USER,getListItem().get(position1));
-            activity.startActivityForResult(intent,TambahPemasukanFragment.REQUEST_UPDATE);
+            Intent intent = new Intent(activity, FormData.class);
+            intent.putExtra(FormData.EXTRA_POSITION,position1);
+            intent.putExtra(FormData.EXTRA_USER,getListItem().get(position1));
+            activity.startActivityForResult(intent,FormData.REQUEST_UPDATE);
         }));
     }
 

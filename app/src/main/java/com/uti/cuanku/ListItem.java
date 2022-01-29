@@ -6,13 +6,12 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class ListItem implements Parcelable {
+public class ListItem extends AppCompatActivity implements Parcelable {
 
     private int id;
     private String nominal;
     private String judul;
     private String keterangan;
-    private String tanggal;
     private String kategori;
 
     public ListItem(){
@@ -24,7 +23,6 @@ public class ListItem implements Parcelable {
         nominal = in.readString();
         judul = in.readString();
         keterangan = in.readString();
-        tanggal = in.readString();
         kategori = in.readString();
     }
 
@@ -34,7 +32,6 @@ public class ListItem implements Parcelable {
         dest.writeString(nominal);
         dest.writeString(judul);
         dest.writeString(keterangan);
-        dest.writeString(tanggal);
         dest.writeString(kategori);
     }
 
@@ -86,13 +83,7 @@ public class ListItem implements Parcelable {
     public void setKeterangan(String keterangan) {
         this.keterangan = keterangan;
     }
-    public String getTanggal() {
-        return tanggal;
-    }
 
-    public void setTanggal(String tanggal) {
-        this.tanggal = tanggal;
-    }
     public String getKategori() {
         return kategori;
     }

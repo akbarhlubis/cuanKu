@@ -2,19 +2,16 @@ package com.uti.cuanku;
 
 import static android.provider.BaseColumns._ID;
 import static com.uti.cuanku.DBContract.TABLE_KEUANGAN;
-import static com.uti.cuanku.DBContract.KeuanganColumns.NOMINAL;
 import static com.uti.cuanku.DBContract.KeuanganColumns.JUDUL;
-import static com.uti.cuanku.DBContract.KeuanganColumns.KETERANGAN;
-import static com.uti.cuanku.DBContract.KeuanganColumns.TANGGAL;
 import static com.uti.cuanku.DBContract.KeuanganColumns.KATEGORI;
+import static com.uti.cuanku.DBContract.KeuanganColumns.KETERANGAN;
+import static com.uti.cuanku.DBContract.KeuanganColumns.NOMINAL;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-
-import com.uti.cuanku.ListItem;
 
 import java.util.ArrayList;
 
@@ -50,7 +47,6 @@ public class KeuanganHelper {
                 item.setNominal(cursor.getString(cursor.getColumnIndexOrThrow(NOMINAL)));
                 item.setJudul(cursor.getString(cursor.getColumnIndexOrThrow(JUDUL)));
                 item.setKeterangan(cursor.getString(cursor.getColumnIndexOrThrow(KETERANGAN)));
-                item.setTanggal(cursor.getString(cursor.getColumnIndexOrThrow(TANGGAL)));
                 item.setKategori(cursor.getString(cursor.getColumnIndexOrThrow(KATEGORI)));
 
                 arrayList.add(item);
@@ -67,7 +63,6 @@ public class KeuanganHelper {
         inValues.put(NOMINAL, item.getNominal());
         inValues.put(JUDUL, item.getJudul());
         inValues.put(KETERANGAN, item.getKeterangan());
-        inValues.put(TANGGAL, item.getTanggal());
         inValues.put(KATEGORI, item.getKategori());
         return database.insert(DB_TABLE,null,inValues);
     }
@@ -77,7 +72,6 @@ public class KeuanganHelper {
         args.put(NOMINAL, item.getNominal());
         args.put(JUDUL, item.getJudul());
         args.put(KETERANGAN, item.getKeterangan());
-        args.put(TANGGAL, item.getTanggal());
         args.put(KATEGORI, item.getKategori());
         return database.update(DB_TABLE, args, _ID + "= '"+item.getId() + "'",null);
     }

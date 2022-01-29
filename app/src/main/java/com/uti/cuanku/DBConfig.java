@@ -22,7 +22,6 @@ public class DBConfig extends SQLiteOpenHelper {
             DBContract.KeuanganColumns.NOMINAL,
             DBContract.KeuanganColumns.JUDUL,
             DBContract.KeuanganColumns.KETERANGAN,
-            DBContract.KeuanganColumns.TANGGAL,
             DBContract.KeuanganColumns.KATEGORI);
 
     public DBConfig(@Nullable Context context) {

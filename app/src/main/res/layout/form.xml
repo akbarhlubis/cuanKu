@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TambahPemasukanFragment"
+    tools:context=".FormData"
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
@@ -56,7 +56,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/edt_tanggal"
+        android:id="@+id/edt_kategori"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"

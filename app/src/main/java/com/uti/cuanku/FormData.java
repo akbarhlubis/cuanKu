@@ -4,14 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.uti.cuanku.KeuanganHelper;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -27,7 +33,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
     SQLiteDatabase db;
     Cursor cursor;
     //    deklarasi variabel komponen
-    EditText edt_nominal,edt_judul,edt_keterangan,edt_tanggal;
+    EditText edt_nominal,edt_judul,edt_keterangan,edt_kategori;
     Button btn_simpan,btn_reset;
 
     public static String EXTRA_USER = "extra_user";
@@ -47,24 +53,26 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form_data);
+        setContentView(R.layout.form);
 
         //Membuat definisi tab layout dengan fragment
-        tabLayout = findViewById(R.id.tabLayout);
-        viewPager = findViewById(R.id.viewPager);
+//        tabLayout = findViewById(R.id.tabLayout);
+//        viewPager = findViewById(R.id.viewPager);
+//
+//        tabLayout.setupWithViewPager(viewPager);
+//
+//        VPAdapter vpAdapter = new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+//        vpAdapter.addFragment(new TambahPemasukanFragment(), "Pemasukan");
+//        vpAdapter.addFragment(new TambahPengeluaranFragment(), "Pengeluaran");
+//        viewPager.setAdapter(vpAdapter);
 
-        tabLayout.setupWithViewPager(viewPager);
-
-        VPAdapter vpAdapter = new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        vpAdapter.addFragment(new TambahPemasukanFragment(), "Pemasukan");
-        vpAdapter.addFragment(new TambahPengeluaranFragment(), "Pengeluaran");
-        viewPager.setAdapter(vpAdapter);
+        //Membuat Definisi untuk list item
 
         edt_nominal = findViewById(R.id.edt_nominal);
         edt_judul = findViewById(R.id.edt_judul);
         edt_keterangan = findViewById(R.id.edt_keterangan);
-        edt_tanggal = findViewById(R.id.edt_tanggal);
-        btn_reset = findViewById(R.id.btn_simpan);
+        edt_kategori = findViewById(R.id.edt_kategori);
+        btn_simpan = findViewById(R.id.btn_simpan);
         btn_simpan.setOnClickListener(this);
 
         keuanganHelper = new KeuanganHelper(this);
@@ -85,7 +93,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
             edt_nominal.setText(item.getNominal());
             edt_judul.setText(item.getJudul());
             edt_keterangan.setText(item.getKeterangan());
-            edt_tanggal.setText(item.getTanggal());
+            edt_kategori.setText(item.getKategori());
         }else{
             actionBarTitle = "Tambah";
             btnTitle = "Simpan";
@@ -98,20 +106,27 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (keuanganHelper != null){
+            keuanganHelper.close();
+        }
+    }
+
+    @Override
     public void onClick(View v) {
 
         if (v.getId() == R.id.btn_simpan){
             String nominal = edt_nominal.getText().toString().trim();
             String judul = edt_judul.getText().toString().trim();
             String keterangan = edt_keterangan.getText().toString().trim();
-            String tanggal = edt_tanggal.getText().toString().trim();
-            String kategori = edt_tanggal.getText().toString().trim();
+            String kategori = edt_kategori.getText().toString().trim();
 
             boolean isEmpty = false;
 
-            if (nominal.isEmpty() || judul.isEmpty() || keterangan.isEmpty() || tanggal.isEmpty()){
+            if (nominal.isEmpty() || judul.isEmpty() || keterangan.isEmpty() || kategori.isEmpty()){
                 isEmpty = true;
-                Toast.makeText(FormData.this, "Tidak boleh ada yang kosong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FormData.this, "Data Tidak boleh ada yang kosong", Toast.LENGTH_SHORT).show();
             }
 
             if (!isEmpty){
@@ -119,7 +134,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
                 newItem.setNominal(nominal);
                 newItem.setJudul(judul);
                 newItem.setKeterangan(keterangan);
-                newItem.setTanggal(tanggal);
+                newItem.setKategori(kategori);
 
                 Intent intent = new Intent();
 
@@ -137,7 +152,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
                     newItem.setNominal(nominal);
                     newItem.setJudul(judul);
                     newItem.setKeterangan(keterangan);
-                    newItem.setTanggal(tanggal);
+                    newItem.setKategori(kategori);
                     keuanganHelper.insert(newItem);
 
                     setResult(RESULT_ADD);
@@ -145,6 +160,5 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
                 }
             }
         }
-
     }
 }
