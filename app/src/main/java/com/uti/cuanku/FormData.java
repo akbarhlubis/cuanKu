@@ -148,7 +148,6 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
                     intent.putExtra(EXTRA_POSITION, pos);
                     setResult(RESULT_UPDATE, intent);
                     finish();
-                    startActivity(getIntent());
                 }else{
                     newItem.setNominal(nominal);
                     newItem.setJudul(judul);

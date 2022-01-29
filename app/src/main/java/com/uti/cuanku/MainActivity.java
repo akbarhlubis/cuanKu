@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (resultCode == FormData.RESULT_ADD){
                 showSnackbarMessage("Satu data berhasil ditambahkan");
                 Objects.requireNonNull(recyclerView.getLayoutManager()).smoothScrollToPosition(recyclerView,new RecyclerView.State(),0);
+                startActivity(getIntent());
             }
         }
 
@@ -176,11 +177,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return true;
     }
     
-    //TODO: bermasalah di item menu "Keluar Aplikasi" yaitu pada line #61 sampai #65 @akbarkbarhlubis
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId()==R.id.about){
             startActivity(new Intent(this, AboutActivity.class));
-        } else if (item.getItemId() == R.id.exit) {
+        } else if (item.getItemId() == R.id.refresh) {
             finish();
             startActivity(getIntent());
         }

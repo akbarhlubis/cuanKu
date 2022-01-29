@@ -4,6 +4,7 @@
 
     <string name="nominal_pengeluaran">Nominal pengeluaran</string>
     <string name="nominal_pemasukan">Nominal pemasukan</string>
+    <string name="nominal">Nominal keuangan</string>
 
     <string name="judul">Judul</string>
     <string name="pemasukan">Pemasukan</string>
@@ -34,6 +35,4 @@
 
     <string name="slide_3_title">Tersimpel</string>
     <string name="slide_3_desc">Mudah dipahami dan tidak sulit untuk digunakan</string>
-    <string name="pengeluaran">Pengeluaran</string>
-    <string name="pemasukan">Pemasukan</string>
 </resources>
