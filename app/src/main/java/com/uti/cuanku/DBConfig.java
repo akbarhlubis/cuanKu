@@ -6,9 +6,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class DBConfig extends SQLiteOpenHelper {
+public class  DBConfig extends SQLiteOpenHelper {
 
-    public static String DB_NAME = "data_keuangan";
+    public static String DB_NAME = "data_keuangan.db";
     private static final int DB_VERSION = 1;
 
     public static final String SQL_CREATE_TABLE_KEUANGAN = String.format("CREATE TABLE %s"

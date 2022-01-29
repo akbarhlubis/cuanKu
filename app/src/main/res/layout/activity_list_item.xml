@@ -4,12 +4,13 @@
     android:id="@+id/cv_item"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/soft_red"
+    app:cardCornerRadius="10dp"
     android:layout_margin="8dp">
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="78dp"
-        android:background="@drawable/corner_item_fill"
         android:padding="10dip">
 
         <TextView

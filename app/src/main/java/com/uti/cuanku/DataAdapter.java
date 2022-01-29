@@ -17,7 +17,7 @@ import java.util.LinkedList;
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ItemHolder> {
 
     LinkedList<ListItem> listItem;
-    private Activity activity;
+    private final Activity activity;
 
     public DataAdapter(Activity activity) {
         this.activity = activity;
@@ -57,7 +57,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ItemHolder> {
         return listItem.size();
     }
 
-    public class ItemHolder extends RecyclerView.ViewHolder {
+    public static class ItemHolder extends RecyclerView.ViewHolder {
 
         TextView nominal, judul, kategori;
         CardView cv_item;

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -76,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         adapter = new DataAdapter(this);
         adapter.setListItem(list);
         recyclerView.setAdapter(adapter);
+
+        new LoadUserAsync().execute();
     }
 
     @Override
@@ -87,6 +90,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v.getId() == R.id.add_cuan){
             startActivityForResult(new Intent(MainActivity.this,FormData.class),FormData.REQUEST_ADD);
+        }
+    }
+
+    private class LoadUserAsync extends AsyncTask<Void,Void, ArrayList<ListItem>> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            if (list.size() > 0){
+                list.clear();
+            }
+        }
+
+        @Override
+        protected ArrayList<ListItem> doInBackground(Void... voids) {
+            return keuanganHelper.query();
+        }
+
+        @Override
+        protected void onPostExecute(ArrayList<ListItem> items) {
+            super.onPostExecute(items);
+
+            list.addAll(items);
+            adapter.setListItem(list);
+            adapter.notifyDataSetChanged();
+
+            if (list.size() == 0){
+                showSnackbarMessage("Tidak ada data saat ini");
+            }
         }
     }
 
@@ -150,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, AboutActivity.class));
         } else if (item.getItemId() == R.id.exit) {
             finish();
-            System.exit(0);
+            startActivity(getIntent());
         }
         return true;
     }

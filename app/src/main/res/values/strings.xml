@@ -34,4 +34,6 @@
 
     <string name="slide_3_title">Tersimpel</string>
     <string name="slide_3_desc">Mudah dipahami dan tidak sulit untuk digunakan</string>
+    <string name="pengeluaran">Pengeluaran</string>
+    <string name="pemasukan">Pemasukan</string>
 </resources>

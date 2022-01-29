@@ -72,23 +72,25 @@
         android:textSize="18sp" />
 
     <RadioGroup
+        android:id="@+id/radio_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
+        android:orientation="horizontal"
         android:layout_marginEnd="24dp">
 
         <RadioButton
-            android:id="@+id/radioPemasukan"
-            android:layout_width="match_parent"
+            android:id="@+id/radio_pemasukan"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:text="Pemasukan" />
+            android:text="@string/pemasukan" />
 
         <RadioButton
-            android:id="@+id/radioPengeluaran"
-            android:layout_width="match_parent"
+            android:id="@+id/radio_pengeluaran"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:text="Pengeluaran" />
+            android:text="@string/pengeluaran" />
     </RadioGroup>
 
     <LinearLayout

@@ -124,7 +124,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
 
             boolean isEmpty = false;
 
-            if (nominal.isEmpty() || judul.isEmpty() || keterangan.isEmpty() || kategori.isEmpty()){
+            if (nominal.isEmpty() || judul.isEmpty() || keterangan.isEmpty()){
                 isEmpty = true;
                 Toast.makeText(FormData.this, "Data Tidak boleh ada yang kosong", Toast.LENGTH_SHORT).show();
             }
@@ -148,6 +148,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
                     intent.putExtra(EXTRA_POSITION, pos);
                     setResult(RESULT_UPDATE, intent);
                     finish();
+                    startActivity(getIntent());
                 }else{
                     newItem.setNominal(nominal);
                     newItem.setJudul(judul);

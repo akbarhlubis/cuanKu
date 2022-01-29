@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class ListItem extends AppCompatActivity implements Parcelable {
+public class ListItem implements Parcelable {
 
     private int id;
     private String nominal;
