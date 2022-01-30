@@ -13,18 +13,21 @@
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/drawable/stroke_corner_btn.xml" value="0.22447916666666667" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/drawable/stroke_shape.xml" value="0.22447916666666667" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/drawable/stroke_shape_long.xml" value="0.22447916666666667" />
+        <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/drawable/welcome_rounded_corner_btn.xml" value="0.22447916666666667" />
+        <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/drawable/welcome_stroke_corner_btn.xml" value="0.22447916666666667" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/font/poppins_light.xml" value="0.1296875" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/activity_about.xml" value="0.33" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/activity_form_data.xml" value="0.22" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/activity_list_item.xml" value="0.5" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
-        <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/activity_welcome.xml" value="0.19427083333333334" />
+        <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/activity_welcome.xml" value="0.5" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/form.xml" value="0.22" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/fragment_pemasukan.xml" value="0.2" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/fragment_pengeluaran.xml" value="0.25" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/slide1.xml" value="0.20833333333333334" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/slide2.xml" value="0.20833333333333334" />
+        <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/slide3.xml" value="0.20833333333333334" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/layout/slide4.xml" value="0.20833333333333334" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/menu/main_menu.xml" value="0.25" />
         <entry key="..\:/Backup HDD/Perkuliahan/Semester 5/Pemrograman Mobile/cuanKu/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.115625" />
@@ -40,7 +43,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.22" />
+        <option name="scale" value="0.5" />
       </ProjectState>
     </option>
   </component>

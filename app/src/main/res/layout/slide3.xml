@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="336dp"
             android:layout_height="343dp"
-            android:src="@drawable/ilus_intro3" />
+            android:src="@drawable/ic_ilus_intro3" />
 
         <TextView
             android:layout_width="wrap_content"
