@@ -32,13 +32,14 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
+
     //    deklarasi variabel class
     DBConfig config;
     //    deklarasi variabel SQLite
     SQLiteDatabase db;
     Cursor cursor;
     //    deklarasi variabel komponen
-    EditText edt_nominal,edt_judul,edt_keterangan,edt_kategori;
+    EditText edt_nominal,edt_judul,edt_keterangan,edt_kategori,edt_tanggal;
     Button btn_simpan,btn_hapus;
     DatePickerDialog datePicker;
     String date;
@@ -79,6 +80,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
         edt_judul = findViewById(R.id.edt_judul);
         edt_keterangan = findViewById(R.id.edt_keterangan);
         edt_kategori = findViewById(R.id.edt_kategori);
+        edt_tanggal = findViewById(R.id.edt_tanggal);
         date ="";
         btn_hapus = findViewById(R.id.btn_hapus);
         btn_simpan = findViewById(R.id.btn_simpan);
@@ -104,6 +106,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
             edt_judul.setText(item.getJudul());
             edt_keterangan.setText(item.getKeterangan());
             edt_kategori.setText(item.getKategori());
+            edt_tanggal.setText(item.getTanggal());
 
         }else{
             actionBarTitle = "Tambah";
@@ -115,7 +118,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
 
         btn_simpan.setText(btnTitle);
 
-        edt_kategori.setOnClickListener(new View.OnClickListener() {
+        edt_tanggal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 datePicker = new DatePickerDialog(FormData.this, new DatePickerDialog.OnDateSetListener() {
@@ -124,7 +127,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
                         // set day of month , month and year value in the edit text
                         NumberFormat numberformat = new DecimalFormat("00");
                         date = year + "-" + numberformat.format(( month_of_year +1 )) + "-" + numberformat.format(day_of_month);
-                        edt_kategori.setText( numberformat.format(day_of_month) + "/" + numberformat.format(( month_of_year +1 )) + "/" + year );
+                        edt_tanggal.setText( numberformat.format(day_of_month) + "/" + numberformat.format(( month_of_year +1 )) + "/" + year );
                     }
                 }, CurrentDateHelper.year, CurrentDateHelper.month, CurrentDateHelper.day);
                 datePicker.show();
@@ -157,6 +160,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
             String judul = edt_judul.getText().toString().trim();
             String keterangan = edt_keterangan.getText().toString().trim();
             String kategori = edt_kategori.getText().toString().trim();
+            String tanggal = edt_tanggal.getText().toString().trim();
 
             boolean isEmpty = false;
 
@@ -171,6 +175,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
                 newItem.setJudul(judul);
                 newItem.setKeterangan(keterangan);
                 newItem.setKategori(kategori);
+                newItem.setTanggal(tanggal);
 
                 Intent intent = new Intent();
 
@@ -189,6 +194,7 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
                     newItem.setJudul(judul);
                     newItem.setKeterangan(keterangan);
                     newItem.setKategori(kategori);
+                    newItem.setTanggal(tanggal);
                     keuanganHelper.insert(newItem);
 
                     setResult(RESULT_ADD);

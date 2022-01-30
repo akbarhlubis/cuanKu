@@ -13,6 +13,7 @@ public class ListItem implements Parcelable {
     private String judul;
     private String keterangan;
     private String kategori;
+    private String tanggal;
 
     public ListItem(){
 
@@ -24,6 +25,7 @@ public class ListItem implements Parcelable {
         judul = in.readString();
         keterangan = in.readString();
         kategori = in.readString();
+        tanggal = in.readString();
     }
 
     @Override
@@ -33,6 +35,7 @@ public class ListItem implements Parcelable {
         dest.writeString(judul);
         dest.writeString(keterangan);
         dest.writeString(kategori);
+        dest.writeString(tanggal);
     }
 
     @Override
@@ -90,6 +93,14 @@ public class ListItem implements Parcelable {
 
     public void setKategori(String kategori) {
         this.kategori = kategori;
+    }
+
+    public String getTanggal() {
+        return tanggal;
+    }
+
+    public void setTanggal(String tanggal) {
+        this.tanggal = tanggal;
     }
 
 }

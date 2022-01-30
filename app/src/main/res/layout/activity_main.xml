@@ -46,7 +46,6 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/yellow"
         android:id="@+id/add_cuan"
         android:contentDescription="Add"
         android:src="@drawable/ic_add"

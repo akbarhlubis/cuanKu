@@ -1,6 +1,7 @@
 package com.uti.cuanku;
 
 import static android.provider.BaseColumns._ID;
+import static com.uti.cuanku.DBContract.KeuanganColumns.TANGGAL;
 import static com.uti.cuanku.DBContract.TABLE_KEUANGAN;
 import static com.uti.cuanku.DBContract.KeuanganColumns.JUDUL;
 import static com.uti.cuanku.DBContract.KeuanganColumns.KATEGORI;
@@ -48,6 +49,7 @@ public class KeuanganHelper {
                 item.setJudul(cursor.getString(cursor.getColumnIndexOrThrow(JUDUL)));
                 item.setKeterangan(cursor.getString(cursor.getColumnIndexOrThrow(KETERANGAN)));
                 item.setKategori(cursor.getString(cursor.getColumnIndexOrThrow(KATEGORI)));
+                item.setTanggal(cursor.getString(cursor.getColumnIndexOrThrow(TANGGAL)));
 
                 arrayList.add(item);
                 cursor.moveToNext();
@@ -64,6 +66,7 @@ public class KeuanganHelper {
         inValues.put(JUDUL, item.getJudul());
         inValues.put(KETERANGAN, item.getKeterangan());
         inValues.put(KATEGORI, item.getKategori());
+        inValues.put(TANGGAL, item.getTanggal());
         return database.insert(DB_TABLE,null,inValues);
     }
 
@@ -73,6 +76,7 @@ public class KeuanganHelper {
         args.put(JUDUL, item.getJudul());
         args.put(KETERANGAN, item.getKeterangan());
         args.put(KATEGORI, item.getKategori());
+        args.put(TANGGAL, item.getTanggal());
         return database.update(DB_TABLE, args, _ID + "= '"+item.getId() + "'",null);
     }
 

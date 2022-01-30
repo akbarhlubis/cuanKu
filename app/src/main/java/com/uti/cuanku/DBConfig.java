@@ -16,13 +16,15 @@ public class  DBConfig extends SQLiteOpenHelper {
                     " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL," +
+                    " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL)",
             DBContract.TABLE_KEUANGAN,
             DBContract.KeuanganColumns._ID,
             DBContract.KeuanganColumns.NOMINAL,
             DBContract.KeuanganColumns.JUDUL,
             DBContract.KeuanganColumns.KETERANGAN,
-            DBContract.KeuanganColumns.KATEGORI);
+            DBContract.KeuanganColumns.KATEGORI,
+            DBContract.KeuanganColumns.TANGGAL);
 
     public DBConfig(@Nullable Context context) {
         super(context, DB_NAME, null, DB_VERSION);

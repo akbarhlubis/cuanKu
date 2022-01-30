@@ -10,5 +10,6 @@ public class DBContract {
         static String JUDUL = "judul";
         static String KETERANGAN = "keterangan";
         static String KATEGORI = "kategori";
+        static String TANGGAL = "tanggal";
     }
 }
