@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -14,12 +15,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.uti.cuanku.KeuanganHelper;
 
 import com.google.android.material.tabs.TabLayout;
+
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class FormData extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,7 +39,9 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
     Cursor cursor;
     //    deklarasi variabel komponen
     EditText edt_nominal,edt_judul,edt_keterangan,edt_kategori;
-    Button btn_simpan,btn_reset;
+    Button btn_simpan,btn_hapus;
+    DatePickerDialog datePicker;
+    String date;
 
     public static String EXTRA_USER = "extra_user";
     public static String EXTRA_POSITION = "extra_position";
@@ -72,6 +79,8 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
         edt_judul = findViewById(R.id.edt_judul);
         edt_keterangan = findViewById(R.id.edt_keterangan);
         edt_kategori = findViewById(R.id.edt_kategori);
+        date ="";
+        btn_hapus = findViewById(R.id.btn_hapus);
         btn_simpan = findViewById(R.id.btn_simpan);
         btn_simpan.setOnClickListener(this);
 
@@ -90,10 +99,12 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
         if (isEdit){
             actionBarTitle = "Ubah";
             btnTitle = "Update";
+            btn_hapus.setVisibility(Button.VISIBLE);
             edt_nominal.setText(item.getNominal());
             edt_judul.setText(item.getJudul());
             edt_keterangan.setText(item.getKeterangan());
             edt_kategori.setText(item.getKategori());
+
         }else{
             actionBarTitle = "Tambah";
             btnTitle = "Simpan";
@@ -103,6 +114,31 @@ public class FormData extends AppCompatActivity implements View.OnClickListener 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         btn_simpan.setText(btnTitle);
+
+        edt_kategori.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePicker = new DatePickerDialog(FormData.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month_of_year, int day_of_month) {
+                        // set day of month , month and year value in the edit text
+                        NumberFormat numberformat = new DecimalFormat("00");
+                        date = year + "-" + numberformat.format(( month_of_year +1 )) + "-" + numberformat.format(day_of_month);
+                        edt_kategori.setText( numberformat.format(day_of_month) + "/" + numberformat.format(( month_of_year +1 )) + "/" + year );
+                    }
+                }, CurrentDateHelper.year, CurrentDateHelper.month, CurrentDateHelper.day);
+                datePicker.show();
+            }
+        });
+
+        btn_hapus.setOnClickListener(v -> {
+            keuanganHelper.delete(item.getId());
+            Intent intent = new Intent();
+            intent.putExtra(EXTRA_POSITION, pos);
+            setResult(RESULT_DELETE, intent);
+            finish();
+        });
+
     }
 
     @Override

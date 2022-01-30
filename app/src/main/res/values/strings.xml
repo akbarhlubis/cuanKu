@@ -16,7 +16,7 @@
     <string name="tanggal">Tanggal</string>
     <string name="btn_update">Update</string>
     <string name="btn_simpan">Simpan</string>
-    <string name="btn_reset">Reset</string>
+    <string name="btn_hapus">Hapus</string>
 
     <string name="keterangan_about"> Aplikasi ini merupakan hasil Ujian Akhir Semester mata kuliah Pemrograman Mobile di Universitas Teknokrat Indonesia</string>
 

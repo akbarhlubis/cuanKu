@@ -41,7 +41,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ItemHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull DataAdapter.ItemHolder holder, int position) {
-        holder.nominal.setText(listItem.get(position).getNominal());
+        holder.nominal.setText("Rp. "+ listItem.get(position).getNominal());
         holder.judul.setText(listItem.get(position).getJudul());
         holder.kategori.setText(listItem.get(position).getKategori());
         holder.cv_item.setOnClickListener(new CustomClick(position, (view, position1) -> {
