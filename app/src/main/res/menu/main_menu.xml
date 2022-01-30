@@ -4,9 +4,11 @@
     <item
         android:id="@+id/about"
         android:title="@string/about"
-        app:showAsAction="never"/>
+        android:icon="@drawable/ic_about"
+        app:showAsAction="always"/>
     <item
-        android:id="@+id/exit"
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_refresh"
         android:title="@string/keluar"
-        app:showAsAction="never"/>
+        app:showAsAction="always"/>
 </menu>

@@ -4,6 +4,7 @@
 
     <string name="nominal_pengeluaran">Nominal pengeluaran</string>
     <string name="nominal_pemasukan">Nominal pemasukan</string>
+    <string name="nominal">Nominal keuangan</string>
 
     <string name="judul">Judul</string>
     <string name="pemasukan">Pemasukan</string>
@@ -15,7 +16,7 @@
     <string name="tanggal">Tanggal</string>
     <string name="btn_update">Update</string>
     <string name="btn_simpan">Simpan</string>
-    <string name="btn_reset">Reset</string>
+    <string name="btn_hapus">Hapus</string>
 
     <string name="keterangan_about"> Aplikasi ini merupakan hasil Ujian Akhir Semester mata kuliah Pemrograman Mobile di Universitas Teknokrat Indonesia</string>
 
@@ -34,4 +35,6 @@
 
     <string name="slide_3_title">Tersimpel</string>
     <string name="slide_3_desc">Mudah dipahami dan tidak sulit untuk digunakan</string>
+    <string name="Nominal">nominal</string>
+    <string name="kategori">Kategori</string>
 </resources>

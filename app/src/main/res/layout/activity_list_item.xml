@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cv_item"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
+    app:cardBackgroundColor="@color/soft_red"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="6dp">
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="78dp"
-        android:background="@drawable/corner_item_fill"
-        android:padding="10dip"
-        tools:context=".ListItem">
+        android:padding="10dip">
 
         <TextView
             android:id="@+id/nominal"

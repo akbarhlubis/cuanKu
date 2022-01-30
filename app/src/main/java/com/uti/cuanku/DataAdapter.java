@@ -17,7 +17,7 @@ import java.util.LinkedList;
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ItemHolder> {
 
     LinkedList<ListItem> listItem;
-    private Activity activity;
+    private final Activity activity;
 
     public DataAdapter(Activity activity) {
         this.activity = activity;
@@ -41,14 +41,14 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ItemHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull DataAdapter.ItemHolder holder, int position) {
-        holder.nominal.setText(listItem.get(position).getNominal());
+        holder.nominal.setText("Rp. "+ listItem.get(position).getNominal());
         holder.judul.setText(listItem.get(position).getJudul());
         holder.kategori.setText(listItem.get(position).getKategori());
         holder.cv_item.setOnClickListener(new CustomClick(position, (view, position1) -> {
-            Intent intent = new Intent(activity, TambahPemasukanFragment.class);
-            intent.putExtra(TambahPemasukanFragment.EXTRA_POSITION,position1);
-            intent.putExtra(TambahPemasukanFragment.EXTRA_USER,getListItem().get(position1));
-            activity.startActivityForResult(intent,TambahPemasukanFragment.REQUEST_UPDATE);
+            Intent intent = new Intent(activity, FormData.class);
+            intent.putExtra(FormData.EXTRA_POSITION,position1);
+            intent.putExtra(FormData.EXTRA_USER,getListItem().get(position1));
+            activity.startActivityForResult(intent,FormData.REQUEST_UPDATE);
         }));
     }
 
@@ -57,7 +57,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ItemHolder> {
         return listItem.size();
     }
 
-    public class ItemHolder extends RecyclerView.ViewHolder {
+    public static class ItemHolder extends RecyclerView.ViewHolder {
 
         TextView nominal, judul, kategori;
         CardView cv_item;

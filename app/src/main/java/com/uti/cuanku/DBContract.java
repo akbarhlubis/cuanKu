@@ -9,7 +9,7 @@ public class DBContract {
         static String NOMINAL = "nominal";
         static String JUDUL = "judul";
         static String KETERANGAN = "keterangan";
-        static String TANGGAL = "tanggal";
         static String KATEGORI = "kategori";
+        static String TANGGAL = "tanggal";
     }
 }

@@ -6,13 +6,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class DBConfig extends SQLiteOpenHelper {
+public class  DBConfig extends SQLiteOpenHelper {
 
-    public static String DB_NAME = "data_keuangan";
+    public static String DB_NAME = "data_keuangan.db";
     private static final int DB_VERSION = 1;
 
     public static final String SQL_CREATE_TABLE_KEUANGAN = String.format("CREATE TABLE %s"
                     + " (%s INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL," +
@@ -22,8 +23,8 @@ public class DBConfig extends SQLiteOpenHelper {
             DBContract.KeuanganColumns.NOMINAL,
             DBContract.KeuanganColumns.JUDUL,
             DBContract.KeuanganColumns.KETERANGAN,
-            DBContract.KeuanganColumns.TANGGAL,
-            DBContract.KeuanganColumns.KATEGORI);
+            DBContract.KeuanganColumns.KATEGORI,
+            DBContract.KeuanganColumns.TANGGAL);
 
     public DBConfig(@Nullable Context context) {
         super(context, DB_NAME, null, DB_VERSION);
